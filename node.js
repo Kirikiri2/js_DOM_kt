@@ -30,5 +30,5 @@ function foo() {
         }
     }
 }
-const button = document.getElementById("but");
-button.addEventListener("click", foo);
+// const button = document.getElementById("but");
+// button.addEventListener("click", foo);
