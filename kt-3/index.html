@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .catalog {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+
+        .item {
+            cursor: pointer;
+            background-color: #b22222;
+            color: white;
+            padding: 5px;
+            margin: 2px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .item span {
+            margin-left: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Каталог товаров</h2>
+    <ul class="catalog">
+        <li>
+            <div class="item toggle">[+] <span>Книги</span></div>
+            <ul class="hidden">
+                <li>
+                    <div class="item toggle">[+] <span>Отечественные</span></div>
+                    <ul class="hidden"></ul>
+                </li>
+                <li>
+                    <div class="item toggle">[+] <span>Зарубежные</span></div>
+                    <ul class="hidden">
+                        <li>
+                            <div class="item">Детективы</div>
+                        </li>
+                        <li>
+                            <div class="item">Научная фантастика</div>
+                        </li>
+                        <li>
+                            <div class="item">Исторические</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="item toggle">[+] <span>DVD</span></div>
+            <ul class="hidden">
+                <li>
+                    <div class="item toggle">[+] <span>Отечественные</span></div>
+                    <ul class="hidden">
+                        <li>
+                            <div class="item">Детективы</div>
+                        </li>
+                        <li>
+                            <div class="item">Научная фантастика</div>
+                        </li>
+                        <li>
+                            <div class="item">Исторические</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="item toggle">[+] <span>Зарубежные</span></div>
+                    <ul class="hidden"></ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+
+        document.querySelectorAll(".toggle").forEach(item => {
+            item.addEventListener("click", function () {
+                let submenu = this.nextElementSibling;
+
+                if (submenu) {
+                    if (submenu.classList.contains("hidden")) {
+                        submenu.classList.remove("hidden");
+                        this.innerHTML = "[-] " + this.innerHTML.substring(4);
+                    } else {
+                        submenu.classList.add("hidden");
+                        this.innerHTML = "[+] " + this.innerHTML.substring(4);
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
