@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма банковской карты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="all">
+        <div class="container">
+            <form id="card-form">
+                <label>Название банка:
+                    <input type="text" id="bank-name" required>
+                    <span class="error" id="bank-name-error"></span>
+                </label>
+                <label>Тип платежной системы:
+                    <input type="text" id="payment-system" required>
+                    <span class="error" id="payment-system-error"></span>
+                </label>
+                <label>Номер карты:
+                    <input type="text" id="card-number" maxlength="16" required>
+                    <span class="error" id="card-number-error"></span>
+                </label>
+                <label>Имя держателя карты:
+                    <input type="text" id="card-holder" required>
+                    <span class="error" id="card-holder-error"></span>
+                </label>
+                <label>Месяц и год окончания:
+                    <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                    <span class="error" id="expiry-date-error"></span>
+                </label>
+                <button type="submit">Отправить</button>
+            </form>
+            <div class="card-preview">
+                <div class="bank-logo" id="bank-logo">Банк</div>
+                <div class="card-number" id="preview-card-number">0000 0000 0000 0000</div>
+                <div class="card-holder" id="preview-card-holder">Имя Держателя</div>
+                <div class="expiry-date" id="preview-expiry-date">MM/YY</div>
+                <div class="payment-logo" id="payment-logo">VISA</div>
+            </div>
+        </div>
+        <table id="card-table">
+            <thead>
+                <tr>
+                    <th>Банк</th>
+                    <th>Платежная система</th>
+                    <th>Номер карты</th>
+                    <th>Имя держателя</th>
+                    <th>Срок действия</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

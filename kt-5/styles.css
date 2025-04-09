@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card-preview {
+    width: 300px;
+    height: 180px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bank-logo,
+.payment-logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-number,
+.card-holder,
+.expiry-date {
+    font-size: 16px;
+}
+
+#card-table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#card-table th,
+#card-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#card-table th {
+    background-color: #f2f2f2;
+}
